@@ -19,6 +19,7 @@ Matur Nuwun*/
 const {
 	downloadContentFromMessage
 } = require("@adiwajshing/baileys")
+const { wallpaperaccess} = require('../lib/wallpaperaccess')
 const { color, bgcolor } = require('../lib/color')
 const { geuffer, fetchJson, fetchText, getRandom, getGroupAdmins, runtime, sleep, makeid } = require("../lib/myfunc");
 const { webp2mp4File } = require("../lib/convert")
@@ -629,6 +630,33 @@ if (chats.startsWith(`@6288213292687`)){
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
         conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
 		break
+case 'wallpaperaccess':
+  try{
+  const aku_biji = await wallpaperaccess(q)
+  let jsonData = aku_biji
+  let kamu_telor = Math.floor(Math.random() * jsonData.length);
+  let anunya = jsonData[kamu_telor];
+ 
+  console.log(anunya.link)
+  let buttons = [
+      {
+       buttonId: `/wallpaperaccess ${q}`, 
+       buttonText: {
+        displayText: 'Next'
+      }, type: 1},
+    ]
+    let buttonMessage = {
+      image: { url: anunya.link },
+      caption: "Result",
+      footer: monospace(botName),
+      buttons: buttons,
+      headerType: 4
+     }
+     conn.sendMessage(from, buttonMessage, { quoted: msg })
+    } catch (e) { e = String(e)
+      reply(from, 'Tidak ditemukan!', { quoted : msg } )
+   }
+  break
 			case prefix+'allmenu':
 			    
 			    var teks = allmenu(sender, prefix, pushname, isOwner, isPremium, balance, limit, limitCount, glimit, gcount)
