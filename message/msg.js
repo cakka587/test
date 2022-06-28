@@ -630,7 +630,7 @@ if (chats.startsWith(`@6288213292687`)){
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
         conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
 		break
-case prefix+'wallpaperaccess':
+case prefix+'o:
   try{
   const aku_biji = await wallpaperaccess(q)
   let jsonData = aku_biji
@@ -638,13 +638,14 @@ case prefix+'wallpaperaccess':
   let anunya = jsonData[kamu_telor];
  
   console.log(anunya.link)
-  let buttons = [
+  var but = [
       {
        buttonId: `/wallpaperaccess ${q}`, 
        buttonText: {
         displayText: 'Next'
       }, type: 1},
     ]
+    /**
     let buttonMessage = {
       image: { url: anunya.link },
       caption: "Result",
@@ -652,7 +653,8 @@ case prefix+'wallpaperaccess':
       buttons: buttons,
       headerType: 4
      }
-     conn.sendMessage(from, buttonMessage, { quoted: msg })
+     **/
+     conn.sendMessage(from, { caption: "Result", buttons: but, image: anunya.link}, { quoted: msg })
     } catch (e) { e = String(e)
       reply(from, 'Tidak ditemukan!', { quoted : msg } )
    }
