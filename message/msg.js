@@ -630,7 +630,7 @@ if (chats.startsWith(`@6288213292687`)){
         {buttonId: `/owner`, buttonText: { displayText: "☰  OWNER" }, type: 2 }]
         conn.sendMessage(from, { caption: teksmenu, image: fs.readFileSync(setting.pathimg), buttons: butmenu, footer: monospace(botName), mentions: [sender]}, { quoted: msg })
 		break
-case 'wallpaperaccess':
+case prefix+'wallpaperaccess':
   try{
   const aku_biji = await wallpaperaccess(q)
   let jsonData = aku_biji
