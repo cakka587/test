@@ -324,7 +324,7 @@ module.exports = async(conn, msg, m, setting, store) => {
 		// Auto Read & Presence Online
 		conn.sendReadReceipt(from, sender, [msg.key.id])
 		conn.sendPresenceUpdate('available', from)
-		conn.sendPresenceUpdate('composing', from)
+		conn.sendPresenceUpdate(from)
 		
         // Auto Registrasi
 		if (isCmd && !isUser) {
