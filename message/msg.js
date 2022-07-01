@@ -610,11 +610,11 @@ case prefix+'quotesanime':
     case prefix+'animequotes':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 			var kome = fetchJson(`https://katanime.vercel.app/api/getrandom`)
-var hasil = pickRandom(kome.result[1].indo)
+			const quotanim = kome.result.map((r, i ) => `${r.indo}`).slice(0, 1).toString();
 var meko = [
 			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
 		]
-		conn.sendMessage(from, {caption: hasil, templateButtons: meko, footer: `© ${kome.result[1].character} | ${kome.result[1].anime}`, mentions: [sender]} )
+		conn.sendMessage(from, {caption: quotanim, templateButtons: meko, mentions: [sender]} )
 		limitAdd(sender, limit)
 break
 		default:
