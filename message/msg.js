@@ -609,7 +609,7 @@ if (chats.startsWith(`@6281233700056`)){
 case prefix+'quotesanime':
     case prefix+'animequotes':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			var kome = fetchJson(`https://katanime.vercel.app/api/getrandom`).then(r => r.kome())
+			var kome = fetchJson(`https://katanime.vercel.app/api/getrandom`).then(r => r.json())
 			if (kome.result.indo > 1) return;
 			if (kome.result.anime > 1) return;
 var hasil = pickRandom(kome.result.indo)
