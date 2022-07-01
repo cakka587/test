@@ -41,6 +41,7 @@ const tictac = require("../lib/tictac");
 const _prem = require("../lib/premium");
 const fs = require ("fs");
 const moment = require("moment-timezone");
+const fetch = require("node-fetch");
 const util = require("util");
 const { exec, spawn } = require("child_process");
 const ffmpeg = require("fluent-ffmpeg");
@@ -609,8 +610,8 @@ if (chats.startsWith(`@6281233700056`)){
 case prefix+'quotesanime':
     case prefix+'animequotes':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			var kome = fetchJson(`https://katanime.vercel.app/api/getrandom`)
-			const quotanim = kome.result.map((r, i ) => `${r.indo}`).slice(0, 1).toString();
+			var json = fetch(`https://katanime.vercel.app/api/getrandom`).then(r => r.json())
+			const quotanim = json.result.map((r, i ) => `${r.indo}`).slice(0, 1).toString();
 var meko = [
 			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
 		]
