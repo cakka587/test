@@ -605,7 +605,20 @@ if (chats.startsWith(`@6281233700056`)){
 			addBalance(sender, randomNomor(45), balance)
 			console.log('->[\x1b[1;32mCMD\x1b[1;37m]', color(moment(msg.messageTimestamp *1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
 		}
-
+		switch(command) {
+		case prefix+'quotesanime':
+    case prefix+'animequotes':
+      if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
+			var kome = fetchJson(``)
+var hasil = pickRandom(kome.result.indo)
+var meko = [
+			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
+		]
+		conn.sendMessage(from, {caption: kome, templateButtons: meko, footer: `© ${kome.result.character}`, mentions: [sender]} )
+		limitAdd(sender, limit)
+break
+		default:
+		}
 
 	} catch (err) {
 		console.log(color('[ERROR]', 'red'), err)
