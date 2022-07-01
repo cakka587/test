@@ -610,15 +610,17 @@ if (chats.startsWith(`@6281233700056`)){
 case prefix+'quotesanime':
     case prefix+'animequotes':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-			var json = fetch(`https://katanime.vercel.app/api/getrandom`).then(r => r.json())
-			const quotanim = json.result.map((r, i ) => `${r.indo}`).slice(0, 1).toString();
+			var res = await (await fetch('https://katanime.vercel.app/api/getrandom'))
+  if (!res.ok) throw await res.text()
+  let json = await res.json()
+  if(!json.result[0]) throw json
+  var { indo, character, anime } = json.result[0]
 var meko = [
 			{ quickReplyButton: { displayText: `Next Anime Quotes ➡️`, id: `${prefix}quotesanime` } },
 		]
-		conn.sendMessage(from, {caption: quotanim, templateButtons: meko, mentions: [sender]} )
+		conn.sendMessage(from, {caption: indo, templateButtons: meko, footer: `© ${character} | ${anime}`, mentions: [sender]} )
 		limitAdd(sender, limit)
 break
-		default:
 		}
 
 	} catch (err) {
