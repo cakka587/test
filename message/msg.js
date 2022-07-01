@@ -621,6 +621,7 @@ var meko = [
 		conn.sendMessage(from, {caption: indo, templateButtons: meko, footer: `© ${character} | ${anime}`, mentions: [sender]} )
 		limitAdd(sender, limit)
 break
+		default:
 		}
 
 	} catch (err) {
