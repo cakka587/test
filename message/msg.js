@@ -544,6 +544,7 @@ if (chats.match(toktok)) {
 		  }
 		}
 		const jempol = 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'
+const nais = 'IMG-20220706-WA0097.jpg'
 if (chats.startsWith(`Cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/xyle.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
@@ -551,10 +552,10 @@ if (chats.startsWith(`cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/jokeuwi.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
 if (chats.startsWith(`oke`)){
- conn.sendMessage(from, {sticker: {url: jempol}}, {quoted: fake})
+ conn.sendMessage(from, {sticker: fs.readFileSync('../sticker/IMG-20220706-WA0097.jpg')}, {quoted: fake})
 }
 if (chats.startsWith(`ok`)){
- conn.sendMessage(from, {sticker: {url: jempol}})
+ conn.sendMessage(from, {sticker: fs.readFileSync('../sticker/IMG-20220706-WA0097.jpg')})
 }
 if (chats.startsWith(`ya`)){
  conn.sendMessage(from, {sticker: fs.readFileSync(`https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png`)}, {quoted: fake})
