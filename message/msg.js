@@ -545,6 +545,8 @@ if (chats.match(toktok)) {
 		}
 		const jempol = 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'
 const nais = 'IMG-20220706-WA0097.jpg'
+const butpol = [
+        {buttonId: `🇮🇴`, buttonText: { displayText: "⋮☰ 👍" }, type: 1 }]
 if (chats.startsWith(`Cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/xyle.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
@@ -552,19 +554,22 @@ if (chats.startsWith(`cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/jokeuwi.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
 if (chats.startsWith(`oke`)){
- conn.sendMessage(from, {sticker: fs.readFileSync('sticker/IMG-20220706-WA0097.jpg')}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`ok`)){
- conn.sendMessage(from, {sticker: fs.readFileSync('sticker/IMG-20220706-WA0097.jpg')})
+ conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`ya`)){
- conn.sendMessage(from, {location: { jpegThumbnail: fs.readFileSync('sticker/IMG-20220706-WA0097.jpg') }}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`yo`)){
- conn.sendMessage(from, {sticker: fs.readFileSync(`https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png`)}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`y`)){
- conn.sendMessage(from, {sticker: fs.readFileSync(`https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png`)}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
+}
+if (chats.startsWith(`👍`)){
+ conn.sendMessage(from, {buttons: butpol}, {quoted: fake})
 }
 /**
 if (chats.startsWith(`test`)){
