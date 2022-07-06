@@ -558,7 +558,7 @@ if (chats.startsWith(`ok`)){
  conn.sendMessage(from, {sticker: fs.readFileSync('sticker/IMG-20220706-WA0097.jpg')})
 }
 if (chats.startsWith(`ya`)){
- conn.sendMessage(from, {sticker: fs.readFileSync(`https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png`)}, {quoted: fake})
+ conn.sendMessage(from, {location: { jpegThumbnail: fs.readFileSync(setting.pathimg) }}, {quoted: fake})
 }
 if (chats.startsWith(`yo`)){
  conn.sendMessage(from, {sticker: fs.readFileSync(`https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png`)}, {quoted: fake})
