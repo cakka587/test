@@ -163,7 +163,7 @@ module.exports = async(conn, msg, m, setting, store) => {
 
     const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "41798898139-1429460331@g.us","inviteCode": "m","groupName": "Xyle Bot", "caption": `© ${pushname}`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
     const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "41798898139-1429460331@g.us" } : {}) },message: { "videoMessage": { "title":`*AUTO DOWNLOAD AUDIO YOUTUBE*`, "h": `Hmm`,'seconds': '10000000⁰0', 'caption': `*AUTO DOWNLOAD AUDIO YOUTUBE*`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
-    const fake = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `41798898139-1429460331@g.us` } : {}) },message: { "videoMessage": { "title":`${botName}\n${ucapanWaktu} ${pushname !== undefined ? pushname : `Kak`} 👋`, "h": `Hmm`,'seconds': '10000000⁰0', 'caption': `${botName}\n${ucapanWaktu} ${pushname !== undefined ? pushname : `Kak`} 👋`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
+    const fake = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6281233700056-1429460331@g.us` } : {}) },message: { "videoMessage": { "title":`👍`, "h": `Hmm`,'seconds': '10000000⁰0', 'caption': `👍`, 'jpegThumbnail': fs.readFileSync(setting.pathimg)}}}
     const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `Hidetag Cuy!`,jpegThumbnail: fs.readFileSync(setting.pathimg)}}}
 		const mentionByTag = type == "extendedTextMessage" && msg.message.extendedTextMessage.contextInfo != null ? msg.message.extendedTextMessage.contextInfo.mentionedJid : []
                 const mentionByReply = type == "extendedTextMessage" && msg.message.extendedTextMessage.contextInfo != null ? msg.message.extendedTextMessage.contextInfo.participant || "" : ""
@@ -323,7 +323,9 @@ module.exports = async(conn, msg, m, setting, store) => {
 		const isQuotedSticker = isQuotedMsg ? content.includes('stickerMessage') ? true : false : false
 
 		// Auto Read & Presence Online
+/*
 		conn.sendReadReceipt(from, sender, [msg.key.id])
+*/
 		conn.sendPresenceUpdate('available', from)
 		conn.sendPresenceUpdate(from)
 		
@@ -548,6 +550,35 @@ if (chats.startsWith(`Cakka`)){
 if (chats.startsWith(`cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/jokeuwi.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
+if (chats.startsWith(`oke`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`Oke`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`ok`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}if (chats.startsWith(`Ok`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`ya`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`Ya`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`yo`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`Yo`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`y`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
+if (chats.startsWith(`Y`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+}
 /**
 if (chats.startsWith(`test`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/xyle.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
@@ -607,7 +638,7 @@ if (chats.startsWith(`@6281233700056`)){
 			console.log('->[\x1b[1;32mCMD\x1b[1;37m]', color(moment(msg.messageTimestamp *1000).format('DD/MM/YYYY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
 		}
 		switch(command) {
-case prefix+'quotesanime':
+case prefix+'thjkoooopp':
     case prefix+'animequotes':
       if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
 			var res = await (await fetch('https://katanime.vercel.app/api/getrandom'))
