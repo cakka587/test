@@ -551,33 +551,34 @@ if (chats.startsWith(`cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/jokeuwi.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
 if (chats.startsWith(`oke`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`Oke`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`ok`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
-}if (chats.startsWith(`Ok`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
+}
+if (chats.startsWith(`Ok`)){
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`ya`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`Ya`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`yo`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`Yo`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`y`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 if (chats.startsWith(`Y`)){
- conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})}
+ conn.sendMessage(from, {sticker: {url: 'https://i.ibb.co/hyLMcxB/IMG-20220706-WA0097.png'}}, {quoted: fake})
 }
 /**
 if (chats.startsWith(`test`)){
