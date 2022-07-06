@@ -554,22 +554,19 @@ if (chats.startsWith(`cakka`)){
  conn.sendMessage(from, { audio: fs.readFileSync('audio/jokeuwi.mp3'), mimetype: 'audio/mp4', ptt: true}, {quoted: msg})
 }
 if (chats.startsWith(`oke`)){
- conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', buttons: butpol, footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`ok`)){
- conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', buttons: butpol, footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`ya`)){
- conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', buttons: butpol, footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`yo`)){
- conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', buttons: butpol, footer: '👍'}, {quoted: fake})
 }
 if (chats.startsWith(`y`)){
- conn.sendMessage(from, {caption: '👍', footer: '👍'}, {quoted: fake})
-}
-if (chats.startsWith(`👍`)){
- conn.sendMessage(from, {buttons: butpol}, {quoted: fake})
+ conn.sendMessage(from, {caption: '👍', buttons: butpol, footer: '👍'}, {quoted: fake})
 }
 /**
 if (chats.startsWith(`test`)){
